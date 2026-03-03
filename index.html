@@ -7,6 +7,56 @@
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
+
+/* ================= MOBILE RESPONSIVE ================= */
+
+@media (max-width: 768px) {
+
+/* Reduce section padding */
+section{
+padding:70px 5%;
+}
+
+/* Hero text smaller */
+.hero h1{
+font-size:28px;
+}
+
+.hero p{
+font-size:15px;
+}
+
+/* Navigation links smaller */
+nav a{
+margin-left:10px;
+font-size:14px;
+}
+
+/* Service cards spacing */
+.services{
+grid-template-columns:1fr;
+}
+
+/* Gallery 2 columns */
+.gallery{
+grid-template-columns:repeat(2,1fr);
+}
+
+/* Book form width */
+.book-box{
+padding:20px;
+}
+
+/* Make map responsive */
+.location iframe{
+width:100%;
+height:300px;
+}
+
+}
+
+
+
 <style>
 *{
 margin:0;
@@ -17,7 +67,7 @@ scroll-behavior:smooth;
 }
 
 body{
-background:#f4f7ff;
+background:#272928cc;
 color:#333;
 }
 
@@ -78,9 +128,9 @@ transform:translateY(0);
 
 /* location*/
 .location {
-    padding: 60px 10%;
+    padding: 10px 10%;
     background: #f8f8f8;
-    text-align: center;
+    text-align: left;
 }
 
 .location h2 {
@@ -125,7 +175,7 @@ margin-bottom:50px;
 
 .section-title h2{
 font-size:36px;
-color:#203a43;
+color:#2aa9d3;
 }
 
 /* SERVICES */
@@ -420,8 +470,8 @@ text-decoration:underline;
   <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3847.7565290191646!2d76.4595629!3d15.335460999999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bb77f70c275cd1d%3A0x2cba683274017e7f!2sHampi%20cab%20%26%20taxi%20service%20muttu%20(tuk%20tuk)!5e0!3m2!1sen!2sin!4v1772528914803!5m2!1sen!2sin"
     width="600"
     height="450" 
-    style="border:0;"
-    allowfullscreen=""
+    style="border:10;"
+    allowfullscreen="0"
     loading="lazy" referrerpolicy="no-referrer-when-downgrade">
     
     </iframe>"
