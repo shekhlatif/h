@@ -272,6 +272,47 @@ transition:0.3s;
 background:linear-gradient(90deg,#2c5364,#203a43);
 }
 
+
+/* menu */
+    /* ===== MOBILE HAMBURGER MENU ===== */
+
+.menu-toggle{
+display:none;
+font-size:28px;
+color:white;
+cursor:pointer;
+}
+
+@media(max-width:768px){
+
+nav{
+position:absolute;
+top:70px;
+right:0;
+background:#203a43;
+flex-direction:column;
+width:200px;
+display:none;
+padding:15px;
+border-radius:8px;
+}
+
+nav a{
+display:block;
+margin:10px 0;
+}
+
+nav.active{
+display:flex;
+}
+
+.menu-toggle{
+display:block;
+}
+
+}
+
+    
 /* CONTACT */
 .contact{
 text-align:center;
@@ -346,7 +387,9 @@ text-decoration:underline;
 
 <header>
 <img src="https://blogger.googleusercontent.com/img/a/AVvXsEgPTHC940hPeliGiK3Ur1GMg-lSBwI8JhSP-PdOoX2gsJZTo6FOOeID8GKpZpnH0ei5S0Tx1sUS9lnAsMCjgZBTheMdxWSVRbBwEi113ZwysbIPoG2nOv6PSuhSqMow6FVbw6Hs8BpJeNIxm9hg-CRrjy40lqtCHOfPZVDde67k3mQIUrQ3109RfZo8NtY" alt="Logo">
-<nav>
+<div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+<nav id="navMenu">
 <a href="#home">Home</a>
 <a href="#services">Services</a>
 <a href="#gallery">Gallery</a>
@@ -545,5 +588,12 @@ window.open("https://wa.me/919110409388?text=" + encodeURIComponent(message));
 }
 </script>
 
+
+    <script>
+function toggleMenu(){
+document.getElementById("navMenu").classList.toggle("active");
+}
+</script>
+    
 </body>
 </html>
